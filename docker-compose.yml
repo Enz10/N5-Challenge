@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "N5challenge-enzo"
+    ports:
+      - "1433:1433"
+
+  n5-web-api:
+    build:
+      context: .
+      dockerfile: N5-Web-Api/Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      DatabaseSettings__SqlServer: "sqlserver"
+      DatabaseSettings__DatabaseName: "ChallengeN5"
+      DatabaseSettings__DbUser: "sa"
+      DatabaseSettings__DbPassword: "N5challenge-enzo"
+    depends_on:
+      - sqlserver
+
+networks:
+  default:
+    driver: bridge

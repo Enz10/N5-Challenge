@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\N5-Web-Api.props" />
+</Project>
