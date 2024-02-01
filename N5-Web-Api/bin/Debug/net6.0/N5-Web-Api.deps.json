@@ -9,9 +9,10 @@
       "N5-Web-Api/1.0.0": {
         "dependencies": {
           "Application": "1.0.0",
+          "Common": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "FluentValidation": "11.9.0",
           "FluentValidation.AspNetCore": "10.4.0",
-          "Infrastructure": "1.0.0",
           "Mapster": "7.3.0",
           "Mapster.DependencyInjection": "1.0.0",
           "MediatR": "10.0.0",
@@ -20,6 +21,7 @@
           "Microsoft.EntityFrameworkCore.Design": "6.0.26",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.4",
+          "NEST": "6.8.11",
           "Refit.HttpClientFactory": "6.3.2",
           "Sieve": "2.5.5",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -27,6 +29,14 @@
         },
         "runtime": {
           "N5-Web-Api.dll": {}
+        }
+      },
+      "Elasticsearch.Net/6.8.11": {
+        "runtime": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.11.0"
+          }
         }
       },
       "FluentValidation/11.9.0": {
@@ -421,6 +431,17 @@
           }
         }
       },
+      "NEST/6.8.11": {
+        "dependencies": {
+          "Elasticsearch.Net": "6.8.11"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nest.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.11.0"
+          }
+        }
+      },
       "Refit/6.3.2": {
         "dependencies": {
           "System.Net.Http.Json": "6.0.0"
@@ -729,18 +750,29 @@
       },
       "Application/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "Infrastructure": "1.0.0",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11",
+          "Sieve": "2.5.5"
         },
         "runtime": {
           "Application.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "dependencies": {
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11"
         },
         "runtime": {
           "Domain.dll": {}
@@ -749,10 +781,12 @@
       "Infrastructure/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.26",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
+          "NEST": "6.8.11"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -765,6 +799,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Elasticsearch.Net/6.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rrZXzhb7W9USxok0AeJvRkojrwRkLF7VxGUUmHSOSQik1FfblpNobqA4+MfBMs5oiItNROXlul/gpZiNpbjObg==",
+      "path": "elasticsearch.net/6.8.11",
+      "hashPath": "elasticsearch.net.6.8.11.nupkg.sha512"
     },
     "FluentValidation/11.9.0": {
       "type": "package",
@@ -1060,6 +1101,13 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "NEST/6.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xq4CPa74ea2W2vUzI8bwG9GPW/wAhIKkdYzSshIg96WzvT96S7Qow+Bd/RqfBDa3xVqZi8VA33DNynoRNmg3eQ==",
+      "path": "nest/6.8.11",
+      "hashPath": "nest.6.8.11.nupkg.sha512"
+    },
     "Refit/6.3.2": {
       "type": "package",
       "serviceable": true,
@@ -1299,6 +1347,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -12,10 +12,11 @@
 	  <NoWarn>$(NoWarn);8604</NoWarn>
     <RootNamespace>N5_Web_Api</RootNamespace>
     <UserSecretsId>659b122a-b344-47ba-adeb-0278eb7b7657</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elasticsearch.Net" Version="6.8.11" />
     <PackageReference Include="FluentValidation" Version="11.9.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
     <PackageReference Include="Mapster" Version="7.3.0" />
@@ -29,6 +30,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.26" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
+    <PackageReference Include="NEST" Version="6.8.11" />
     <PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
     <PackageReference Include="Sieve" Version="2.5.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
@@ -36,8 +38,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
 	<ProjectReference Include="..\Application\Application.csproj" />
+	<ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1xwUpT/4BDiN6apWMODA7br3Jyals0rgH6awLt0sHZEGSbAxnXKthJKzwPGpMdi+MQAsXwRutlFhaQRhV+Xlbw==",
+  "dgSpecHash": "Cu/JxxtwgtQMYVBrc/ThTkpqWMRQXxDnw4kq3jnEczx4w5wE+zt+9uKlWJyqP1EieSOF4SEXkJ9e7jLcbbBLAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\enzoa\\.nuget\\packages\\elasticsearch.net\\6.8.11\\elasticsearch.net.6.8.11.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr\\10.0.0\\mediatr.10.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr.contracts\\1.0.0\\mediatr.contracts.1.0.0.nupkg.sha512",
@@ -36,6 +37,7 @@
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\nest\\6.8.11\\nest.6.8.11.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

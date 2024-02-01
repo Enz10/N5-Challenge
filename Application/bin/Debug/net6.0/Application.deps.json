@@ -8,12 +8,24 @@
     ".NETCoreApp,Version=v6.0": {
       "Application/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "Infrastructure": "1.0.0",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11",
+          "Sieve": "2.5.5"
         },
         "runtime": {
           "Application.dll": {}
+        }
+      },
+      "Elasticsearch.Net/6.8.11": {
+        "runtime": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.11.0"
+          }
         }
       },
       "MediatR/10.0.0": {
@@ -349,11 +361,36 @@
           }
         }
       },
+      "NEST/6.8.11": {
+        "dependencies": {
+          "Elasticsearch.Net": "6.8.11"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nest.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.8.11.0"
+          }
+        }
+      },
+      "Sieve/2.5.5": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "System.ComponentModel.Annotations": "4.4.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Sieve.dll": {
+            "assemblyVersion": "2.5.5.0",
+            "fileVersion": "2.5.5.0"
+          }
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "System.ComponentModel.Annotations/4.4.1": {},
       "System.Configuration.ConfigurationManager/4.7.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.7.0",
@@ -495,10 +532,17 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "dependencies": {
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11"
         },
         "runtime": {
           "Domain.dll": {}
@@ -507,10 +551,12 @@
       "Infrastructure/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.26",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
+          "NEST": "6.8.11"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -523,6 +569,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Elasticsearch.Net/6.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rrZXzhb7W9USxok0AeJvRkojrwRkLF7VxGUUmHSOSQik1FfblpNobqA4+MfBMs5oiItNROXlul/gpZiNpbjObg==",
+      "path": "elasticsearch.net/6.8.11",
+      "hashPath": "elasticsearch.net.6.8.11.nupkg.sha512"
     },
     "MediatR/10.0.0": {
       "type": "package",
@@ -727,12 +780,33 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "NEST/6.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xq4CPa74ea2W2vUzI8bwG9GPW/wAhIKkdYzSshIg96WzvT96S7Qow+Bd/RqfBDa3xVqZi8VA33DNynoRNmg3eQ==",
+      "path": "nest/6.8.11",
+      "hashPath": "nest.6.8.11.nupkg.sha512"
+    },
+    "Sieve/2.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JNT/m73vu7lzUfi+DNGVRptWYDJTRhS7BgVwqcvlEq5sAhrMmiFZJxM3LPagjsJbcuscMrmMfLgLvhyDNGv/Bg==",
+      "path": "sieve/2.5.5",
+      "hashPath": "sieve.2.5.5.nupkg.sha512"
+    },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "path": "system.collections.immutable/6.0.0",
       "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/4.7.0": {
       "type": "package",
@@ -824,6 +898,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Domain/1.0.0": {
       "type": "project",

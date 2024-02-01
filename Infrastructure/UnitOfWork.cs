@@ -1,30 +1,28 @@
 ﻿using Domain;
-using Domain.PermissionAsignments;
 using Domain.Permissions;
-using Domain.PermissionTypes;
 using Infrastructure.Permission;
-using Infrastructure.PermissionAsignments;
-using Infrastructure.PermissionTypes;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly SecurityContext securityContext;
+        private readonly PermissionContext permissionContext;
         private readonly IMediator mediator;
         private IPermissionsRepository permissionsRepository;
-        private IPermissionAsignmentsRepository permissionAsignmentsRepository;
-        private IPermissionTypesRepository permissionTypesRepository;
 
-        public UnitOfWork(SecurityContext securityContext, IMediator mediator)
+        public UnitOfWork(PermissionContext securityContext, IMediator mediator)
         {
-            this.securityContext = securityContext;
+            this.permissionContext = securityContext;
             this.mediator = mediator;
         }
 
-        public IPermissionsRepository PermissionsRepository => permissionsRepository ??= new PermissionsRepository(securityContext);
-        public IPermissionAsignmentsRepository PermissionAsignmentsRepository => permissionAsignmentsRepository ??= new PermissionAsignmentsRepository(securityContext);
-        public IPermissionTypesRepository PermissionTypesRepository => permissionTypesRepository ??= new PermissionsTypesRepository(securityContext);
+        public IPermissionsRepository PermissionsRepository => permissionsRepository ??= new PermissionsRepository(permissionContext);
+
+        public async Task SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            await permissionContext.SaveChangesAsync(cancellationToken);
+        }
     }
 }

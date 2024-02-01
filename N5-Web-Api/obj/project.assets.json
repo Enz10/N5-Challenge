@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Elasticsearch.Net/6.8.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "FluentValidation/11.9.0": {
         "type": "package",
         "compile": {
@@ -679,6 +692,22 @@
           }
         }
       },
+      "NEST/6.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Elasticsearch.Net": "[6.8.11, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Refit/6.3.2": {
         "type": "package",
         "dependencies": {
@@ -1283,9 +1312,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Common": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "Infrastructure": "1.0.0",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11",
+          "Sieve": "2.5.5"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -1294,12 +1327,24 @@
           "bin/placeholder/Application.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1313,10 +1358,12 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Domain": "1.0.0",
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.26",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
+          "NEST": "6.8.11"
         },
         "compile": {
           "bin/placeholder/Infrastructure.dll": {}
@@ -1328,6 +1375,25 @@
     }
   },
   "libraries": {
+    "Elasticsearch.Net/6.8.11": {
+      "sha512": "rrZXzhb7W9USxok0AeJvRkojrwRkLF7VxGUUmHSOSQik1FfblpNobqA4+MfBMs5oiItNROXlul/gpZiNpbjObg==",
+      "type": "package",
+      "path": "elasticsearch.net/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elasticsearch.net.6.8.11.nupkg.sha512",
+        "elasticsearch.net.nuspec",
+        "images/nuget-icon.png",
+        "lib/net461/Elasticsearch.Net.dll",
+        "lib/net461/Elasticsearch.Net.pdb",
+        "lib/net461/Elasticsearch.Net.xml",
+        "lib/netstandard2.0/Elasticsearch.Net.dll",
+        "lib/netstandard2.0/Elasticsearch.Net.pdb",
+        "lib/netstandard2.0/Elasticsearch.Net.xml",
+        "license.txt"
+      ]
+    },
     "FluentValidation/11.9.0": {
       "sha512": "VneVlTvwYDkfHV5av3QrQ0amALgrLX6LV94wlYyEsh0B/klJBW7C8y2eAtj5tOZ3jH6CAVpr4s1ZGgew/QWyig==",
       "type": "package",
@@ -2546,6 +2612,25 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NEST/6.8.11": {
+      "sha512": "xq4CPa74ea2W2vUzI8bwG9GPW/wAhIKkdYzSshIg96WzvT96S7Qow+Bd/RqfBDa3xVqZi8VA33DNynoRNmg3eQ==",
+      "type": "package",
+      "path": "nest/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/nuget-icon.png",
+        "lib/net461/Nest.dll",
+        "lib/net461/Nest.pdb",
+        "lib/net461/Nest.xml",
+        "lib/netstandard2.0/Nest.dll",
+        "lib/netstandard2.0/Nest.pdb",
+        "lib/netstandard2.0/Nest.xml",
+        "license.txt",
+        "nest.6.8.11.nupkg.sha512",
+        "nest.nuspec"
       ]
     },
     "Refit/6.3.2": {
@@ -3935,6 +4020,11 @@
       "path": "../Application/Application.csproj",
       "msbuildProject": "../Application/Application.csproj"
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -3949,9 +4039,10 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
+      "Common >= 1.0.0",
+      "Elasticsearch.Net >= 6.8.11",
       "FluentValidation >= 11.9.0",
       "FluentValidation.AspNetCore >= 10.4.0",
-      "Infrastructure >= 1.0.0",
       "Mapster >= 7.3.0",
       "Mapster.DependencyInjection >= 1.0.0",
       "MediatR >= 10.0.0",
@@ -3960,6 +4051,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.19.4",
+      "NEST >= 6.8.11",
       "Refit.HttpClientFactory >= 6.3.2",
       "Sieve >= 2.5.5",
       "Swashbuckle.AspNetCore >= 6.5.0",
@@ -3996,8 +4088,8 @@
             "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Application\\Application.csproj"
             },
-            "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Common\\Common.csproj"
             }
           }
         }
@@ -4015,6 +4107,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Elasticsearch.Net": {
+            "target": "Package",
+            "version": "[6.8.11, )"
+          },
           "FluentValidation": {
             "target": "Package",
             "version": "[11.9.0, )"
@@ -4056,6 +4152,10 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.19.4, )"
+          },
+          "NEST": {
+            "target": "Package",
+            "version": "[6.8.11, )"
           },
           "Refit.HttpClientFactory": {
             "target": "Package",

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,14 +9,19 @@
 	  <NoWarn>$(NoWarn);0649</NoWarn>
 	  <NoWarn>$(NoWarn);8509</NoWarn>
 	  <NoWarn>$(NoWarn);8618</NoWarn>
+	  <NoWarn>$(NoWarn);8603</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elasticsearch.Net" Version="6.8.11" />
     <PackageReference Include="MediatR" Version="10.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.0" />
+    <PackageReference Include="NEST" Version="6.8.11" />
+	<PackageReference Include="Sieve" Version="2.5.5" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 

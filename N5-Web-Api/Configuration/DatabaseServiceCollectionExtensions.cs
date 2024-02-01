@@ -20,7 +20,7 @@ namespace N5_Web_Api.Configuration
 
             string connectionString = $"Server={databaseSettings.SqlServer};Database={databaseSettings.DatabaseName};User Id={databaseSettings.DbUser};Password={databaseSettings.DbPassword};";
 
-            services.AddDbContextPool<SecurityContext>(options =>
+            services.AddDbContextPool<PermissionContext>(options =>
             {
                 options.UseSqlServer(connectionString);
             });

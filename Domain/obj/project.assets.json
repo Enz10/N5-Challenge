@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Elasticsearch.Net/6.8.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "MediatR/10.0.0": {
         "type": "package",
         "dependencies": {
@@ -59,10 +72,45 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "NEST/6.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Elasticsearch.Net": "[6.8.11, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "Elasticsearch.Net/6.8.11": {
+      "sha512": "rrZXzhb7W9USxok0AeJvRkojrwRkLF7VxGUUmHSOSQik1FfblpNobqA4+MfBMs5oiItNROXlul/gpZiNpbjObg==",
+      "type": "package",
+      "path": "elasticsearch.net/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elasticsearch.net.6.8.11.nupkg.sha512",
+        "elasticsearch.net.nuspec",
+        "images/nuget-icon.png",
+        "lib/net461/Elasticsearch.Net.dll",
+        "lib/net461/Elasticsearch.Net.pdb",
+        "lib/net461/Elasticsearch.Net.xml",
+        "lib/netstandard2.0/Elasticsearch.Net.dll",
+        "lib/netstandard2.0/Elasticsearch.Net.pdb",
+        "lib/netstandard2.0/Elasticsearch.Net.xml",
+        "license.txt"
+      ]
+    },
     "MediatR/10.0.0": {
       "sha512": "4/oUEQEtDbJ9OIwsHux0sNsU9+/GRWFTrsDNXnt18JyPnZQyIisN7CmrieXbzJeG7oDSoY2SOw8frOz/mB6rrA==",
       "type": "package",
@@ -128,12 +176,33 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "NEST/6.8.11": {
+      "sha512": "xq4CPa74ea2W2vUzI8bwG9GPW/wAhIKkdYzSshIg96WzvT96S7Qow+Bd/RqfBDa3xVqZi8VA33DNynoRNmg3eQ==",
+      "type": "package",
+      "path": "nest/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/nuget-icon.png",
+        "lib/net461/Nest.dll",
+        "lib/net461/Nest.pdb",
+        "lib/net461/Nest.xml",
+        "lib/netstandard2.0/Nest.dll",
+        "lib/netstandard2.0/Nest.pdb",
+        "lib/netstandard2.0/Nest.xml",
+        "license.txt",
+        "nest.6.8.11.nupkg.sha512",
+        "nest.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Elasticsearch.Net >= 6.8.11",
       "MediatR >= 10.0.0",
-      "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.0"
+      "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.0",
+      "NEST >= 6.8.11"
     ]
   },
   "packageFolders": {
@@ -178,6 +247,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Elasticsearch.Net": {
+            "target": "Package",
+            "version": "[6.8.11, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[10.0.0, )"
@@ -185,6 +258,10 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[10.0.0, )"
+          },
+          "NEST": {
+            "target": "Package",
+            "version": "[6.8.11, )"
           }
         },
         "imports": [

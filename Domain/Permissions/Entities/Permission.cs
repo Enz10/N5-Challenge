@@ -1,12 +1,10 @@
-﻿using Domain.PermissionTypes.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.PermissionAsignments.Entities;
 
 namespace Domain.Permissions.Entities
 {

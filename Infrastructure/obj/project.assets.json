@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Elasticsearch.Net/6.8.11": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Elasticsearch.Net.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -547,6 +560,22 @@
           }
         }
       },
+      "NEST/6.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Elasticsearch.Net": "[6.8.11, 7.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Nest.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -829,8 +858,10 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
+          "NEST": "6.8.11"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -842,6 +873,25 @@
     }
   },
   "libraries": {
+    "Elasticsearch.Net/6.8.11": {
+      "sha512": "rrZXzhb7W9USxok0AeJvRkojrwRkLF7VxGUUmHSOSQik1FfblpNobqA4+MfBMs5oiItNROXlul/gpZiNpbjObg==",
+      "type": "package",
+      "path": "elasticsearch.net/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "elasticsearch.net.6.8.11.nupkg.sha512",
+        "elasticsearch.net.nuspec",
+        "images/nuget-icon.png",
+        "lib/net461/Elasticsearch.Net.dll",
+        "lib/net461/Elasticsearch.Net.pdb",
+        "lib/net461/Elasticsearch.Net.xml",
+        "lib/netstandard2.0/Elasticsearch.Net.dll",
+        "lib/netstandard2.0/Elasticsearch.Net.pdb",
+        "lib/netstandard2.0/Elasticsearch.Net.xml",
+        "license.txt"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -1617,6 +1667,25 @@
         "version.txt"
       ]
     },
+    "NEST/6.8.11": {
+      "sha512": "xq4CPa74ea2W2vUzI8bwG9GPW/wAhIKkdYzSshIg96WzvT96S7Qow+Bd/RqfBDa3xVqZi8VA33DNynoRNmg3eQ==",
+      "type": "package",
+      "path": "nest/6.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/nuget-icon.png",
+        "lib/net461/Nest.dll",
+        "lib/net461/Nest.pdb",
+        "lib/net461/Nest.xml",
+        "lib/netstandard2.0/Nest.dll",
+        "lib/netstandard2.0/Nest.pdb",
+        "lib/netstandard2.0/Nest.xml",
+        "license.txt",
+        "nest.6.8.11.nupkg.sha512",
+        "nest.nuspec"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -2110,11 +2179,13 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Domain >= 1.0.0",
+      "Elasticsearch.Net >= 6.8.11",
       "MediatR >= 10.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 10.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.26"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.26",
+      "NEST >= 6.8.11"
     ]
   },
   "packageFolders": {
@@ -2163,6 +2234,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Elasticsearch.Net": {
+            "target": "Package",
+            "version": "[6.8.11, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[10.0.0, )"
@@ -2184,6 +2259,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.26, )"
+          },
+          "NEST": {
+            "target": "Package",
+            "version": "[6.8.11, )"
           }
         },
         "imports": [

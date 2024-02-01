@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8fOthIA2Yg5wNh/32vQKL1Igs/R8ELrKCBMJ4Um/+UeN0Aj2OhEquQDx3Yckp/uq+yqgQVGIds80i9Cp0qf8FQ==",
+  "dgSpecHash": "uU1EK04PEmx1RJBpAo4ebIigGo8ao1uwu7nz0sOqHnHvqszsgECYV9D6afYLrVRBhxy+t240E9qHsRA6PuVhFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\N5-Web-Api\\N5-Web-Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\enzoa\\.nuget\\packages\\elasticsearch.net\\6.8.11\\elasticsearch.net.6.8.11.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.4.0\\fluentvalidation.aspnetcore.10.4.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.4.0\\fluentvalidation.dependencyinjectionextensions.10.4.0.nupkg.sha512",
@@ -46,6 +47,7 @@
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\nest\\6.8.11\\nest.6.8.11.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\refit\\6.3.2\\refit.6.3.2.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\refit.httpclientfactory\\6.3.2\\refit.httpclientfactory.6.3.2.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\sieve\\2.5.5\\sieve.2.5.5.nupkg.sha512",

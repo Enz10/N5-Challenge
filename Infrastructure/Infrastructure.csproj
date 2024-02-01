@@ -9,9 +9,11 @@
 	  <NoWarn>$(NoWarn);0649</NoWarn>
 	  <NoWarn>$(NoWarn);8509</NoWarn>
 	  <NoWarn>$(NoWarn);8618</NoWarn>
+	  <NoWarn>$(NoWarn);8603</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Elasticsearch.Net" Version="6.8.11" />
     <PackageReference Include="MediatR" Version="10.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.26" />
@@ -20,6 +22,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NEST" Version="6.8.11" />
   </ItemGroup>
 
   <ItemGroup>

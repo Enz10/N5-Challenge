@@ -1,0 +1,12 @@
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\bin\Debug\net6.0\Common.deps.json
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\bin\Debug\net6.0\Common.dll
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\bin\Debug\net6.0\Common.pdb
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.AssemblyInfoInputs.cache
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.AssemblyInfo.cs
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.sourcelink.json
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.dll
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\refint\Common.dll
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.pdb
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\ref\Common.dll

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yC3yqaTd3uzW8blMx9fkr9ugza+s7DIEa/1lRC1gZJWe5EvejfbkicwLJ2Nx4qpfn0UdToj0TCv9wivRMgMejA==",
+  "dgSpecHash": "Ln8aqBarytOcPOS8mFkUov1LUNDFDVgPq953g2HHB6QtCBinXc5+CTU/eiLbiyg2dpWGn4s6xDpouMNSFi/LMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Application\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\enzoa\\.nuget\\packages\\elasticsearch.net\\6.8.11\\elasticsearch.net.6.8.11.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr\\10.0.0\\mediatr.10.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr.contracts\\1.0.0\\mediatr.contracts.1.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.0\\mediatr.extensions.microsoft.dependencyinjection.10.0.0.nupkg.sha512",
@@ -33,7 +34,10 @@
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\nest\\6.8.11\\nest.6.8.11.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\sieve\\2.5.5\\sieve.2.5.5.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
