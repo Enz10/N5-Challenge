@@ -14,5 +14,4 @@ namespace N5_Web_Api.Controllers.Dtos.Permissions
             config.ForType<CreateRequestPermissionRequest, Application.Features.Permissions.Commands.RequestPermission.Command>();
         }
     }
-
 }

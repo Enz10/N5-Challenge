@@ -15,11 +15,6 @@ namespace Infrastructure.Permissions.Configuration
             builder.Property(p => p.EmployeeName).IsRequired().HasMaxLength(255);
             builder.Property(p => p.EmployeeSurname).IsRequired().HasMaxLength(255);
             builder.Property(p => p.PermissionDate).IsRequired();
-
-            builder.HasOne(p => p.PermissionType)
-                .WithMany()
-                .HasForeignKey(p => p.PermissionTypeId)
-                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

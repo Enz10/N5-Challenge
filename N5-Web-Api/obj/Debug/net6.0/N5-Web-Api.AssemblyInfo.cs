@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("N5-Web-Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f95e252f385ae44734730822ee07f47778094fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8f6f684a99d8476e5a677dd1cd88303d4756e04")]
 [assembly: System.Reflection.AssemblyProductAttribute("N5-Web-Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("N5-Web-Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

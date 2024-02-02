@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.4'
 
 services:
   sqlserver:
@@ -6,32 +6,31 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: "N5challenge-enzo"
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
     ports:
       - "1433:1433"
 
   n5-web-api:
+    image: ${DOCKER_REGISTRY-}n5webapi
     build:
       context: .
       dockerfile: N5-Web-Api/Dockerfile
-    ports:
-      - "8000:80"
-    environment:
-      DatabaseSettings__SqlServer: "sqlserver"
-      DatabaseSettings__DatabaseName: "ChallengeN5"
-      DatabaseSettings__DbUser: "sa"
-      DatabaseSettings__DbPassword: "N5challenge-enzo"
-    depends_on:
-      - sqlserver
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
     environment:
-      - discovery.type=single-node
+        - discovery.type=single-node
     ports:
-      - "9200:9200"
-      - "9300:9300"
+        - "9200:9200"
+        - "9300:9300"
     volumes:
-      - esdata:/usr/share/elasticsearch/data
+        - esdata:/usr/share/elasticsearch/data
+
+
+volumes:
+  esdata:
+
 
 networks:
   default:

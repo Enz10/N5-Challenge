@@ -12,7 +12,7 @@ namespace Application.Features.Permissions.Commands
 {
     public sealed partial class RequestPermission
     {
-        public sealed partial class Handler : IRequestHandler<Command, Permission>
+        public sealed class Handler : IRequestHandler<Command, Permission>
         {
             private readonly IUnitOfWork unitOfWork;
 
@@ -31,7 +31,6 @@ namespace Application.Features.Permissions.Commands
                     EmployeeName = request.EmployeeName,
                     EmployeeSurname = request.EmployeeSurname,
                     PermissionDate = request.PermissionDate,
-                    PermissionTypeId = permissionType.Id
                 };
 
                 var createdPermission = await unitOfWork.PermissionsRepository
@@ -40,8 +39,11 @@ namespace Application.Features.Permissions.Commands
                 await unitOfWork.PermissionsRepository
                     .CreatePermissionAssignment(createdPermission.Id, permissionType.Id, cancellationToken);
 
+                await unitOfWork.SaveChangesAsync(cancellationToken);
+
                 return createdPermission;
             }
+
         }
     }
 }

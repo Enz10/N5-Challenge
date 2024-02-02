@@ -24,15 +24,14 @@ namespace Application.Features.Permissions.Queries
             {
                 var query = unitOfWork.PermissionsRepository.GetAllPermissionsQuery();
 
-                var filteredQuery = sieveProcessor.Apply(request, query, applyPagination: false);
-                var totalCount = await filteredQuery.CountAsync(cancellationToken);
-                var paginatedQuery = sieveProcessor.Apply(request, filteredQuery, applyFiltering: false, applySorting: false);
+                var processedQuery = sieveProcessor.Apply(request, query, applyFiltering: true, applySorting: true, applyPagination: true);
 
-                var permissions = await paginatedQuery.ToListAsync(cancellationToken);
+                var totalCount = await query.CountAsync(cancellationToken);
 
-                return new CollectionResult<Permission> ( permissions, request.PageSize ?? permissions.Count, ApplicationConstant.DEFAULT_PAGE_NUMBER, totalCount );
+                var permissions = await processedQuery.ToListAsync(cancellationToken);
+
+                return new CollectionResult<Permission>(permissions, request.PageSize ?? permissions.Count, request.Page ?? ApplicationConstant.DEFAULT_PAGE_NUMBER, totalCount);
             }
         }
     }
-
 }

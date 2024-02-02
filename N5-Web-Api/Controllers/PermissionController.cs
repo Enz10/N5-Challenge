@@ -40,11 +40,11 @@ namespace N5_Web_Api.Controllers
 
         [HttpPut]
         [ProducesResponseType(typeof(PermissionDto), StatusCodes.Status200OK)]
-        public async Task<ActionResult<PermissionDto>> ModifyPermission([FromRoute] int permissionId, [FromBody] UpdatePermissionRequest request, CancellationToken cancellationToken)
+        public async Task<ActionResult<PermissionDto>> ModifyPermission([FromQuery] int id, [FromBody] UpdatePermissionRequest request, CancellationToken cancellationToken)
         {
             ModifyPermission.Command command = mapper.Map<ModifyPermission.Command>(request);
 
-            command.Id = permissionId;
+            command.Id = id;
 
             await mediator.Send(command, cancellationToken);
 
@@ -62,6 +62,16 @@ namespace N5_Web_Api.Controllers
             CollectionResult<Permission> result = await mediator.Send(query, cancellationToken);
 
             return Ok(mapper.Map<ListResult<PermissionDto>>(result));
+        }
+
+        [ApiController]
+        public class ErrorController : ControllerBase
+        {
+            [Route("/Error")]
+            public IActionResult Error()
+            {
+                return Problem();
+            }
         }
     }
 }

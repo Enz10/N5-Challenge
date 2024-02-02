@@ -34,6 +34,16 @@ namespace Infrastructure.Permission
             return permissionType;
         }
 
+        public async Task<PermissionType> GetPermissionTypeByPermissionId(int permissionId, CancellationToken cancellationToken)
+        {
+            var permissionType = await databaseContext.PermissionAssignments
+                .Where(pa => pa.PermissionId == permissionId)
+                .Select(pa => pa.PermissionType)
+                .FirstOrDefaultAsync(cancellationToken);
+
+            return permissionType;
+        }
+
         public async Task CreatePermissionAssignment(int permissionId, int permissionTypeId, CancellationToken cancellationToken = default)
         {
             var permissionAssignment = new PermissionAssignment
@@ -43,19 +53,30 @@ namespace Infrastructure.Permission
             };
 
             await databaseContext.PermissionAssignments.AddAsync(permissionAssignment, cancellationToken);
+
+            await databaseContext.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<Domain.Permissions.Entities.Permission> GetByIdAsync(int id, CancellationToken cancellationToken = default)
         {
             return await databaseContext.Permissions
-                .Include(p => p.PermissionType)
+                .Include(p => p.PermissionAssignments)
+                .ThenInclude(pa => pa.PermissionType)
                 .FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
+        }
+
+        public async Task<List<PermissionAssignment>> GetAssignmentsByPermissionId(int permissionId, CancellationToken cancellationToken = default)
+        {
+            return await databaseContext.PermissionAssignments
+                .Where(pa => pa.PermissionId == permissionId)
+                .ToListAsync(cancellationToken);
         }
 
         public IQueryable<Domain.Permissions.Entities.Permission> GetAllPermissionsQuery()
         {
-            return databaseContext.Permissions.Include(p => p.PermissionType);
+            return databaseContext.Permissions
+                .Include(p => p.PermissionAssignments)
+                    .ThenInclude(pa => pa.PermissionType);
         }
-
     }
 }

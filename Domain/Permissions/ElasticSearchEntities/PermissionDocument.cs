@@ -16,15 +16,15 @@ namespace Domain.Permissions.ElasticSearchEntities
         public string PermissionTypeDescription { get; set; }
         public DateTime PermissionDate { get; set; }
 
-        public PermissionDocument(Permission permission)
-        {
-            Id = permission.Id;
-            EmployeeName = permission.EmployeeName;
-            EmployeeSurname = permission.EmployeeSurname;
-            PermissionTypeId = permission.PermissionTypeId;
-            PermissionTypeDescription = permission.PermissionType.Description;
-            PermissionDate = permission.PermissionDate;
-        }
+        //public PermissionDocument(Permission permission)
+        //{
+        //    Id = permission.Id;
+        //    EmployeeName = permission.EmployeeName;
+        //    EmployeeSurname = permission.EmployeeSurname;
+        //    PermissionTypeId = permission.PermissionTypeId;
+        //    PermissionTypeDescription = permission.PermissionType.Description;
+        //    PermissionDate = permission.PermissionDate;
+        //}
     }
 
 }

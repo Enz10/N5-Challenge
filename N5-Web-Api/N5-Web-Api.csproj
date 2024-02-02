@@ -13,6 +13,7 @@
     <RootNamespace>N5_Web_Api</RootNamespace>
     <UserSecretsId>659b122a-b344-47ba-adeb-0278eb7b7657</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

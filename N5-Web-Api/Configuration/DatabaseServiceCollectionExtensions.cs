@@ -18,7 +18,7 @@ namespace N5_Web_Api.Configuration
         {
             DatabaseSettings databaseSettings = configuration.GetSection(nameof(DatabaseSettings)).Get<DatabaseSettings>();
 
-            string connectionString = $"Server={databaseSettings.SqlServer};Database={databaseSettings.DatabaseName};User Id={databaseSettings.DbUser};Password={databaseSettings.DbPassword};";
+            string connectionString = $"Server={databaseSettings.SqlServer};Database={databaseSettings.DatabaseName};User Id={databaseSettings.DbUser};Password={databaseSettings.DbPassword};MultipleActiveResultSets=True;";
 
             services.AddDbContextPool<PermissionContext>(options =>
             {

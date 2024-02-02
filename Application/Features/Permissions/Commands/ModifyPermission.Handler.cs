@@ -7,7 +7,7 @@ namespace Application.Features.Permissions.Commands
 {
     public sealed partial class ModifyPermission
     {
-        public sealed partial class Handler : IRequestHandler<Command, Permission>
+        public sealed class Handler : IRequestHandler<Command, Permission>
         {
             private readonly IUnitOfWork unitOfWork;
 
@@ -25,13 +25,28 @@ namespace Application.Features.Permissions.Commands
                     throw new NotFoundException("Permission not found");
                 }
 
-                permission.EmployeeName = request.EmployeeName;
-                permission.EmployeeSurname = request.EmployeeSurname;
+                if (!string.IsNullOrWhiteSpace(request.EmployeeName))
+                {
+                    permission.EmployeeName = request.EmployeeName;
+                }
 
-                var permissionType = await unitOfWork.PermissionsRepository
-                    .CreateOrUpdatePermissionType(request.PermissionTypeDescription, cancellationToken);
+                if (!string.IsNullOrWhiteSpace(request.EmployeeSurname))
+                {
+                    permission.EmployeeSurname = request.EmployeeSurname;
+                }
 
-                permission.PermissionTypeId = permissionType.Id;
+                if (request.PermissionDate != DateTime.MinValue)
+                {
+                    permission.PermissionDate = request.PermissionDate;
+                }
+
+                var currentPermissionType = await unitOfWork.PermissionsRepository
+                    .GetPermissionTypeByPermissionId(request.Id, cancellationToken);
+
+                if (!string.IsNullOrWhiteSpace(request.PermissionTypeDescription) && currentPermissionType != null)
+                {
+                    currentPermissionType.Description = request.PermissionTypeDescription;
+                }
 
                 await unitOfWork.SaveChangesAsync(cancellationToken);
 

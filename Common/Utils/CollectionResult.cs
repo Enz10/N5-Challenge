@@ -2,17 +2,17 @@
 {
     public class CollectionResult<T>
     {
-        public IEnumerable<T> Items { get; }
+        public IEnumerable<T> Results { get; }
         public int PageSize { get; }
         public int PageNumber { get; }
-        public int TotalCount { get; }
+        public int Total { get; }
 
-        public CollectionResult(IEnumerable<T> items, int pageSize, int pageNumber, int totalCount)
+        public CollectionResult(IEnumerable<T> results, int pageSize, int pageNumber, int total)
         {
-            Items = items;
+            Results = results;
             PageSize = pageSize;
             PageNumber = pageNumber;
-            TotalCount = totalCount;
+            Total = total;
         }
     }
 

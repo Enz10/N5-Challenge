@@ -1,3 +1,4 @@
+using Application.Features.Permissions.Queries;
 using Microsoft.Extensions.Options;
 using Sieve.Models;
 using Sieve.Services;
@@ -14,6 +15,8 @@ public class ApplicationSieveProcessor : SieveProcessor
 
     protected override SievePropertyMapper MapProperties(SievePropertyMapper mapper)
     {
+        PermissionsSieveConfiguration.ConfigureFilters(mapper);
+
         return mapper;
     }
 }

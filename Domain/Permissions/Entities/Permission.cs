@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Permissions.Entities
 {
@@ -19,12 +16,6 @@ namespace Domain.Permissions.Entities
 
         [Required]
         public string EmployeeSurname { get; set; }
-
-        [Required]
-        public int PermissionTypeId { get; set; }
-
-        [ForeignKey("PermissionTypeId")]
-        public PermissionType PermissionType { get; set; }
 
         [Required]
         public DateTime PermissionDate { get; set; }
