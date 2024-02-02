@@ -39,3 +39,4 @@ C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Infrastructure.
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Confluent.Kafka.dll

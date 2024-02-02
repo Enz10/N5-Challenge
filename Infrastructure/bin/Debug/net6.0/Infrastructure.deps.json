@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Infrastructure/1.0.0": {
         "dependencies": {
+          "Confluent.Kafka": "2.1.0",
           "Domain": "1.0.0",
           "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
@@ -19,6 +20,18 @@
         },
         "runtime": {
           "Infrastructure.dll": {}
+        }
+      },
+      "Confluent.Kafka/2.1.0": {
+        "dependencies": {
+          "System.Memory": "4.5.0",
+          "librdkafka.redist": "2.1.0"
+        },
+        "runtime": {
+          "lib/net6.0/Confluent.Kafka.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
         }
       },
       "Elasticsearch.Net/6.8.11": {
@@ -34,6 +47,135 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "librdkafka.redist/2.1.0": {
+        "runtimeTargets": {
+          "runtimes/linux-arm64/native/librdkafka.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/alpine-librdkafka.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/centos6-librdkafka.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/centos7-librdkafka.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/librdkafka.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/librdkafka.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/librdkafka.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libcrypto-3-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "3.0.8.0"
+          },
+          "runtimes/win-x64/native/libcurl.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "7.86.0.0"
+          },
+          "runtimes/win-x64/native/librdkafka.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/librdkafkacpp.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libssl-3-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "3.0.8.0"
+          },
+          "runtimes/win-x64/native/msvcp140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.29.30040.0"
+          },
+          "runtimes/win-x64/native/vcruntime140.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "14.29.30040.0"
+          },
+          "runtimes/win-x64/native/zlib1.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.2.13.0"
+          },
+          "runtimes/win-x64/native/zstd.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.5.2.0"
+          },
+          "runtimes/win-x86/native/libcrypto-3.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "3.0.8.0"
+          },
+          "runtimes/win-x86/native/libcurl.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "7.86.0.0"
+          },
+          "runtimes/win-x86/native/librdkafka.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/librdkafkacpp.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/libssl-3.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "3.0.8.0"
+          },
+          "runtimes/win-x86/native/msvcp140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.29.30040.0"
+          },
+          "runtimes/win-x86/native/vcruntime140.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "14.29.30040.0"
+          },
+          "runtimes/win-x86/native/zlib1.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.2.13.0"
+          },
+          "runtimes/win-x86/native/zstd.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.5.2.0"
           }
         }
       },
@@ -464,6 +606,7 @@
           }
         }
       },
+      "System.Memory/4.5.0": {},
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.7.0"
@@ -546,6 +689,7 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
+          "Confluent.Kafka": "2.1.0",
           "Elasticsearch.Net": "6.8.11",
           "MediatR": "10.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.0",
@@ -563,6 +707,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Confluent.Kafka/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bpanI6xDZyI34W13NdH9qBt1WvKIxfuhE5qi3ueN7zd4S76D/SkNRmJOUhclNFJ7/jiELJy2rplFTU62CFERkA==",
+      "path": "confluent.kafka/2.1.0",
+      "hashPath": "confluent.kafka.2.1.0.nupkg.sha512"
+    },
     "Elasticsearch.Net/6.8.11": {
       "type": "package",
       "serviceable": true,
@@ -576,6 +727,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "librdkafka.redist/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PDxKbTQkmBtUX1a0VIwIOgA9y+8T4r8OXogbxeLnhTkW/j1xJvKK4VWxYMDuXmGKy5tniMxuAmOJu5UDowk6eA==",
+      "path": "librdkafka.redist/2.1.0",
+      "hashPath": "librdkafka.redist.2.1.0.nupkg.sha512"
     },
     "MediatR/10.0.0": {
       "type": "package",
@@ -835,6 +993,13 @@
       "sha512": "sha512-5tBCjAub2Bhd5qmcd0WhR5s354e4oLYa//kOWrkX+6/7ZbDDJjMTfwLSOiZ/MMpWdE4DWPLOfTLOq/juj9CKzA==",
       "path": "system.identitymodel.tokens.jwt/6.8.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m0psCSpUxTGfvwyO0i03ajXVhgBqyXlibXz0Mo1dtKGjaHrXFLnuQ8rNBTmWRqbfRjr4eC6Wah4X5FfuFDu5og==",
+      "path": "system.memory/4.5.0",
+      "hashPath": "system.memory.4.5.0.nupkg.sha512"
     },
     "System.Runtime.Caching/4.7.0": {
       "type": "package",

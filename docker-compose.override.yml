@@ -11,6 +11,8 @@ services:
       - DatabaseSettings__DbPassword=N5challenge-enzo
       - ElasticSearchSettings__Uri=http://elasticsearch:9200
       - ElasticSearchSettings__DefaultIndex=permissions
+      - kafka__KAFKA_ADVERTISED_HOST_NAME=kafka
+      - kafka__KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
     ports:
       - "80"
       - "443"

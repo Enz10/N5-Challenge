@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "opIBkg7F2RT9drcT88uZwXhlrJoenKQMvT6rdN9KxLVbYFdddZ+DpdOh5v+xtaZTafobmlpUlkeQ030GCKYEsQ==",
+  "dgSpecHash": "di76QkTcIr2qoFQ68I2AN/wxVm82c+d/0RobTmoP3oQ4pCGpSu6SdWzt9F93Yk1TdKXDIher4F2UkFDQCGBGwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Common\\Common.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\enzoa\\.nuget\\packages\\confluent.kafka\\2.1.0\\confluent.kafka.2.1.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\librdkafka.redist\\2.1.0\\librdkafka.redist.2.1.0.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"

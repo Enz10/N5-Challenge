@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "90wGhWXCnqaPufdSrNs6OHZgah1GtEi8LTVuueLHbynLuEonVyAPd9zk3EuZb1/QGX3EJRpc1xv/pdd2OV6Qkw==",
+  "dgSpecHash": "xLbo/F/bcPulE93LdKw8sO9hqGUqrVgwMBPgZRFZyIpjExUN/kqkq7vSR19NBnZbDQceW5ro4xfynEXKXUyZww==",
   "success": true,
   "projectFilePath": "C:\\Users\\enzoa\\OneDrive\\Documentos\\Projects\\N5-Web-Api\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\enzoa\\.nuget\\packages\\confluent.kafka\\2.1.0\\confluent.kafka.2.1.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\elasticsearch.net\\6.8.11\\elasticsearch.net.6.8.11.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\librdkafka.redist\\2.1.0\\librdkafka.redist.2.1.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr\\10.0.0\\mediatr.10.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr.contracts\\1.0.0\\mediatr.contracts.1.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.0\\mediatr.extensions.microsoft.dependencyinjection.10.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\nest\\6.8.11\\nest.6.8.11.nupkg.sha512",
+    "C:\\Users\\enzoa\\.nuget\\packages\\system.memory\\4.5.0\\system.memory.4.5.0.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
     "C:\\Users\\enzoa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"

@@ -50,6 +50,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Elasticsearch.Net": {
               "target": "Package",
               "version": "[6.8.11, )"
@@ -143,6 +147,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -216,6 +226,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Elasticsearch.Net": {
               "target": "Package",
               "version": "[6.8.11, )"
@@ -310,6 +324,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Elasticsearch.Net": {
               "target": "Package",
               "version": "[6.8.11, )"
@@ -421,6 +439,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Elasticsearch.Net": {
               "target": "Package",
               "version": "[6.8.11, )"

@@ -3,6 +3,7 @@ using Domain;
 using Domain.Permissions.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using N5_Web_Api.Configuration;
 using Sieve.Services;
 
 namespace Application.Features.Permissions.Queries
@@ -29,6 +30,10 @@ namespace Application.Features.Permissions.Queries
                 var totalCount = await query.CountAsync(cancellationToken);
 
                 var permissions = await processedQuery.ToListAsync(cancellationToken);
+
+                var producer = new KafkaProducer("kafka:9092", "PermissionEvent");
+
+                await producer.ProduceAsync("GetPermission");
 
                 return new CollectionResult<Permission>(permissions, request.PageSize ?? permissions.Count, request.Page ?? ApplicationConstant.DEFAULT_PAGE_NUMBER, totalCount);
             }

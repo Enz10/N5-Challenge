@@ -10,3 +10,4 @@ C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\C
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\refint\Common.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.pdb
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\ref\Common.dll
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\Common\obj\Debug\net6.0\Common.csproj.AssemblyReference.cache

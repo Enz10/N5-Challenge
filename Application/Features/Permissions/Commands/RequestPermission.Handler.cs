@@ -3,6 +3,7 @@ using Domain;
 using MediatR;
 using Nest;
 using Application.ElasticSearchEntities;
+using N5_Web_Api.Configuration;
 
 namespace Application.Features.Permissions.Commands
 {
@@ -37,7 +38,11 @@ namespace Application.Features.Permissions.Commands
                 await unitOfWork.PermissionsRepository
                     .CreatePermissionAssignment(createdPermission.Id, permissionType.Id, cancellationToken);
 
+                var producer = new KafkaProducer("kafka:9092", "PermissionEvent");
+
                 await unitOfWork.SaveChangesAsync(cancellationToken);
+
+                await producer.ProduceAsync("RequestPermission");
 
                 var permissionDocument = new PermissionDocument
                 {

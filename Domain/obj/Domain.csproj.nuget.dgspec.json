@@ -43,6 +43,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Elasticsearch.Net": {
               "target": "Package",
               "version": "[6.8.11, )"

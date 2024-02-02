@@ -3,6 +3,7 @@ using Application.Exceptions;
 using Domain;
 using Domain.Permissions.Entities;
 using MediatR;
+using N5_Web_Api.Configuration;
 using Nest;
 
 namespace Application.Features.Permissions.Commands
@@ -52,7 +53,11 @@ namespace Application.Features.Permissions.Commands
                     currentPermissionType.Description = request.PermissionTypeDescription;
                 }
 
+                var producer = new KafkaProducer("kafka:9092", "PermissionEvent");
+
                 await unitOfWork.SaveChangesAsync(cancellationToken);
+
+                await producer.ProduceAsync("ModifyPermission");
 
                 var permissionDocument = new PermissionDocument
                 {
