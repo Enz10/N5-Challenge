@@ -1,6 +1,7 @@
-﻿using Elasticsearch.Net;
+﻿using Application.ElasticSearchEntities;
+using Elasticsearch.Net;
 using Nest;
-using static N5_Web_Api.Configuration.DatabasesServiceCollectionExtensions;
+using System;
 
 namespace N5_Web_Api.Configuration
 {
@@ -15,7 +16,8 @@ namespace N5_Web_Api.Configuration
         public static void ConfigureElasticSearch(this IServiceCollection services, IConfiguration configuration)
         {
             var elasticsearchSettings = configuration.GetSection(nameof(ElasticSearchSettings)).Get<ElasticSearchSettings>();
-            var settings = new ConnectionSettings(new Uri(elasticsearchSettings.Uri))
+            var pool = new SingleNodeConnectionPool(new Uri(elasticsearchSettings.Uri));
+            var settings = new ConnectionSettings(pool)
                 .DefaultIndex(elasticsearchSettings.DefaultIndex);
 
             var client = new ElasticClient(settings);

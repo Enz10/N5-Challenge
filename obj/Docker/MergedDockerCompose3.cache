@@ -43,7 +43,7 @@ services:
       DatabaseSettings__DbUser: sa
       DatabaseSettings__SqlServer: sqlserver
       ElasticSearchSettings__DefaultIndex: permissions
-      ElasticSearchSettings__Uri: http://localhost:9200
+      ElasticSearchSettings__Uri: http://elasticsearch:9200
       NUGET_FALLBACK_PACKAGES: ""
     image: n5webapi:dev
     labels:

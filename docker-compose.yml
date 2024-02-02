@@ -18,7 +18,7 @@ services:
       dockerfile: N5-Web-Api/Dockerfile
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.8.11
     environment:
         - discovery.type=single-node
     ports:

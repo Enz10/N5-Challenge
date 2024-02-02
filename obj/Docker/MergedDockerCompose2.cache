@@ -32,7 +32,7 @@ services:
       DatabaseSettings__DbUser: sa
       DatabaseSettings__SqlServer: sqlserver
       ElasticSearchSettings__DefaultIndex: permissions
-      ElasticSearchSettings__Uri: http://localhost:9200
+      ElasticSearchSettings__Uri: http://elasticsearch:9200
     image: n5webapi
     networks:
       default: null

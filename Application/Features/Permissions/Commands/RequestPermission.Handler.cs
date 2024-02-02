@@ -1,12 +1,8 @@
 ﻿using Domain.Permissions.Entities;
 using Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MediatR;
-using static Application.Features.Permissions.Commands.RequestPermission;
+using Nest;
+using Application.ElasticSearchEntities;
 
 namespace Application.Features.Permissions.Commands
 {
@@ -15,10 +11,12 @@ namespace Application.Features.Permissions.Commands
         public sealed class Handler : IRequestHandler<Command, Permission>
         {
             private readonly IUnitOfWork unitOfWork;
+            private readonly IElasticClient elasticClient;
 
-            public Handler(IUnitOfWork unitOfWork)
+            public Handler(IUnitOfWork unitOfWork, IElasticClient elasticClient)
             {
                 this.unitOfWork = unitOfWork;
+                this.elasticClient = elasticClient;
             }
 
             public async Task<Permission> Handle(Command request, CancellationToken cancellationToken)
@@ -41,9 +39,23 @@ namespace Application.Features.Permissions.Commands
 
                 await unitOfWork.SaveChangesAsync(cancellationToken);
 
+                var permissionDocument = new PermissionDocument
+                {
+                    Id = createdPermission.Id,
+                    EmployeeName = createdPermission.EmployeeName,
+                    EmployeeSurname = createdPermission.EmployeeSurname,
+                    PermissionTypeDescription = request.PermissionTypeDescription,
+                    PermissionDate = createdPermission.PermissionDate,
+                };
+
+                var response = await elasticClient.IndexDocumentAsync(permissionDocument, cancellationToken);
+                if (!response.IsValid)
+                {
+                    throw new System.Exception($"Error al indexar en Elasticsearch: {response.OriginalException.Message}");
+                }
+
                 return createdPermission;
             }
-
         }
     }
 }

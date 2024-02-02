@@ -12,6 +12,7 @@ C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Domain.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Application.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Sieve.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.EntityFrameworkCore.dll
+C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Elasticsearch.Net.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Nest.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Swashbuckle.AspNetCore.Swagger.dll
@@ -26,7 +27,6 @@ C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.Entit
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Elasticsearch.Net.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.OpenApi.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\enzoa\OneDrive\Documentos\Projects\N5-Web-Api\bin\Debug\Microsoft.Data.SqlClient.dll
